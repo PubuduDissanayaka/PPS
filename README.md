@@ -1,10 +1,14 @@
 # Paris Premium Shuttle
 
-A responsive static website for Paris Premium Shuttle, built with HTML, CSS, and vanilla JavaScript. No build system or package installation is required.
+A responsive, multi-page static website for Paris Premium Shuttle, built with HTML, CSS, and vanilla JavaScript. No build system or package installation is required.
 
 ## Project files
 
-- `index.html`: responsive homepage, service sections, and transfer enquiry form
+- `index.html`: focused homepage and service overview
+- `services.html`: dedicated airport transfers, private pickups, shuttles, and sightseeing page
+- `about.html`: service overview and journey support information
+- `how-it-works.html`: transfer enquiry process and preparation checklist
+- `contact.html`: contact details and WhatsApp transfer enquiry form
 - `styles.css`: responsive design system and centralized CSS variables
 - `script.js`: accessible mobile navigation, date validation, and WhatsApp enquiry handoff
 - `.github/workflows/pages.yml`: automated GitHub Pages deployment
@@ -15,6 +19,16 @@ A responsive static website for Paris Premium Shuttle, built with HTML, CSS, and
 The live website timed out during implementation, so I could not retrieve its original logo file or reliably sample its exact brand colors. The website is prepared to use the original logo at `assets/logo.png`, with a typographic fallback until that file is added. Do not redraw or replace the logo with a recreated mark.
 
 Before launch, add the untouched official logo at `assets/logo.png` and update the `--brand-*` CSS variables at the top of `styles.css` to the exact colors sampled from the original brand artwork. The current colors are a temporary design palette, not a claim about the original palette.
+
+## Site map
+
+- Home: `index.html`
+- Services: `services.html`
+- About: `about.html`
+- How it works: `how-it-works.html`
+- Contact and transfer enquiries: `contact.html`
+
+Every page uses the shared responsive navigation and footer. The site is built with plain HTML, CSS, and JavaScript, with no build system required.
 
 ## Preview locally
 
