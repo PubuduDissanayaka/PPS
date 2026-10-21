@@ -284,3 +284,44 @@ h1 em, h2 em { color: var(--brand-accent); font-weight: 500; }
   .cta-strip-inner { align-items: flex-start; flex-direction: column; }
   .cta-strip .button { width: 100%; }
 }
+
+/* Additional editorial sections across all pages */
+.benefit-grid,.home-process-grid,.values-grid,.planning-grid,.contact-option-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-top:38px}
+.benefit-grid article,.home-process-grid article,.values-grid article,.planning-grid article{padding:24px 0 8px;border-top:1px solid var(--brand-line)}
+.benefit-mark,.planning-index{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;margin-bottom:18px;border:1px solid var(--brand-accent);border-radius:50%;color:#8c6d3d;font-family:var(--serif);font-size:17px}
+.benefit-grid h3,.home-process-grid h3,.values-grid h3,.planning-grid h3{margin:0 0 9px;color:var(--brand-primary);font-family:var(--serif);font-size:23px;font-weight:500}
+.benefit-grid p,.home-process-grid p,.values-grid p,.planning-grid p{margin:0;color:var(--brand-muted);font-size:13px;line-height:1.9}
+.home-airports,.about-route,.journey-faq,.contact-faq,.service-note{padding:70px 0;background:var(--brand-deep);color:white}
+.home-airports-inner,.about-route-inner,.service-note-inner{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.home-airports h2,.about-route h2,.journey-faq h2,.contact-faq h2,.service-note h2{margin:0 0 18px;color:white;font-family:var(--serif);font-size:clamp(36px,4.5vw,54px);font-weight:500;line-height:1.13}
+.home-airports h2 em,.about-route h2 em,.journey-faq h2 em,.contact-faq h2 em,.service-note h2 em{color:var(--brand-accent)}
+.home-airports-inner p:not(.eyebrow),.about-route-inner p,.service-note-inner>p,.journey-faq .faq-layout>div:first-child>p:not(.eyebrow){color:rgba(255,255,255,.75);font-size:13px;line-height:1.95}
+.airport-mini-list{border-top:1px solid rgba(255,255,255,.2)}
+.airport-mini-list>div{display:flex;align-items:center;gap:24px;padding:20px 0;border-bottom:1px solid rgba(255,255,255,.2)}
+.airport-mini-list b{min-width:52px;color:var(--brand-accent);font-family:var(--serif);font-size:25px;font-weight:500}
+.airport-mini-list span{color:rgba(255,255,255,.9);font-size:13px}
+.home-process-grid article>span{display:block;margin-bottom:22px;color:#9b7a43;font-family:var(--serif);font-size:28px}
+.service-note-inner{grid-template-columns:1fr 1fr auto;gap:36px}
+.service-note-inner>p{max-width:400px}
+.faq-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:clamp(40px,8vw,100px);align-items:start}
+.faq-layout h2{margin:0 0 16px;color:var(--brand-primary);font-family:var(--serif);font-size:clamp(36px,4.3vw,52px);font-weight:500;line-height:1.15}
+.faq-layout h2 em{color:#9b7a43}
+.faq-layout>div:first-child>p:not(.eyebrow){color:var(--brand-muted);font-size:13px;line-height:1.9}
+.faq-list{border-top:1px solid var(--brand-line)}
+.faq-list details{border-bottom:1px solid var(--brand-line)}
+.faq-list summary{position:relative;padding:19px 34px 19px 0;color:var(--brand-primary);cursor:pointer;list-style:none;font-size:14px;font-weight:600}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"+";position:absolute;right:4px;top:16px;color:#9b7a43;font-size:22px;font-weight:400}
+.faq-list details[open] summary:after{content:"−"}
+.faq-list details p{max-width:620px;margin:0;padding:0 28px 20px 0;color:var(--brand-muted);font-size:13px;line-height:1.9}
+.faq-list-dark,.faq-list-dark details{border-color:rgba(255,255,255,.2)}
+.faq-list-dark summary{color:white}
+.faq-list-dark details p{color:rgba(255,255,255,.72)}
+.contact-option-grid{gap:16px}
+.contact-option-grid a{display:block;min-height:220px;padding:26px;border:1px solid var(--brand-line);transition:background .2s,transform .2s}
+.contact-option-grid a:hover{background:var(--brand-paper);transform:translateY(-3px)}
+.contact-option-icon{display:flex;width:36px;height:36px;align-items:center;justify-content:center;margin-bottom:20px;border:1px solid var(--brand-accent);border-radius:50%;color:#8c6d3d}
+.contact-option-grid h3{margin:0 0 8px;color:var(--brand-primary);font-family:var(--serif);font-size:22px;font-weight:500}
+.contact-option-grid p{margin:0 0 16px;color:var(--brand-muted);font-size:12px;line-height:1.8}
+.contact-option-grid strong{color:var(--brand-primary);font-size:12px}
+@media(max-width:760px){.benefit-grid,.home-process-grid,.values-grid,.planning-grid,.contact-option-grid{grid-template-columns:1fr;gap:18px}.home-airports-inner,.about-route-inner,.service-note-inner,.faq-layout{grid-template-columns:1fr;gap:30px}.home-airports,.about-route,.journey-faq,.contact-faq,.service-note{padding:48px 0}.service-note .button{width:100%}.contact-option-grid a{min-height:0}}
