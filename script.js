@@ -78,13 +78,22 @@
         "This is an enquiry, not a confirmed reservation."
       ].join("\n"));
 
-      feedback.textContent = "Your email app will open with the journey details. Please send the email to complete your enquiry.";
-      /*
-       * Replace this value with the business's verified booking email before launch.
-       * No booking email was verified during implementation, so this deliberately
-       * opens a prefilled email without inventing a recipient address.
-       */
-      window.location.href = "mailto:?subject=" + subject + "&body=" + body;
+      feedback.textContent = "Opening WhatsApp with your journey details. Review the message and send it to complete your enquiry.";
+      const whatsappMessage = [
+        "Hello Paris Premium Shuttle,",
+        "",
+        "I would like to enquire about a transfer.",
+        "",
+        "Pickup: " + values.pickup,
+        "Destination: " + values.destination,
+        "Travel date: " + values.date,
+        "Pickup time: " + values.time,
+        "Passengers: " + values.passengers,
+        "Transfer type: " + values.transfer,
+        "",
+        "Please confirm availability and arrangements. I understand this is an enquiry, not a confirmed booking."
+      ].join("\n");
+      window.open("https://wa.me/33633308983?text=" + encodeURIComponent(whatsappMessage), "_blank", "noopener,noreferrer");
     });
   }
 })();
