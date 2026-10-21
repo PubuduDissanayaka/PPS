@@ -60,24 +60,6 @@
         transfer: data.get("transfer")
       };
 
-      const subject = encodeURIComponent("Transfer enquiry | Paris Premium Shuttle");
-      const body = encodeURIComponent([
-        "Hello Paris Premium Shuttle,",
-        "",
-        "I would like to enquire about a transfer. Please confirm availability and arrangements.",
-        "",
-        "Pickup: " + values.pickup,
-        "Destination: " + values.destination,
-        "Travel date: " + values.date,
-        "Pickup time: " + values.time,
-        "Passengers: " + values.passengers,
-        "Transfer type: " + values.transfer,
-        "",
-        "Please contact me to discuss the details.",
-        "",
-        "This is an enquiry, not a confirmed reservation."
-      ].join("\n"));
-
       feedback.textContent = "Opening WhatsApp with your journey details. Review the message and send it to complete your enquiry.";
       const whatsappMessage = [
         "Hello Paris Premium Shuttle,",
