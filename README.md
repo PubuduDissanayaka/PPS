@@ -1,34 +1,45 @@
 # Paris Premium Shuttle
 
-A new, responsive static website for Paris Premium Shuttle built with HTML, CSS, and vanilla JavaScript.
+A responsive static website for Paris Premium Shuttle, built with HTML, CSS, and vanilla JavaScript. No build system or package installation is required.
 
-## Files
-- `index.html`: homepage and booking enquiry form
-- `styles.css`: responsive styling and design tokens
-- `script.js`: mobile navigation, booking form validation, and enquiry handoff
-- `assets/logo.png`: place the existing official logo here without editing it
+## Project files
 
-## Brand asset requirement
-The original website could not be reliably fetched during initial implementation, so the exact logo file and sampled brand color values could not be verified from the source. Do not replace the official logo with a recreated mark. Add the unchanged original logo at `assets/logo.png`, then update the CSS variables at the top of `styles.css` to the exact colors sampled from that logo before launch. The design tokens are centralized for this purpose.
+- `index.html`: responsive homepage, service sections, and transfer enquiry form
+- `styles.css`: responsive design system and centralized CSS variables
+- `script.js`: accessible mobile navigation, date validation, and WhatsApp enquiry handoff
+- `.github/workflows/pages.yml`: automated GitHub Pages deployment
+- `assets/logo.png`: add the original official logo here unchanged
 
-## Run locally
-Open `index.html` in a browser. No build step or package installation is required.
+## Brand asset handoff
 
-## GitHub Pages
-1. Open **Settings → Pages** in this repository.
-2. Choose **Deploy from a branch**.
-3. Select `master` and `/ (root)`, then save.
-4. Wait for GitHub Pages to publish the site.
+The live website timed out during implementation, so I could not retrieve its original logo file or reliably sample its exact brand colors. The website is prepared to use the original logo at `assets/logo.png`, with a typographic fallback until that file is added. Do not redraw or replace the logo with a recreated mark.
 
-A custom domain can be configured in GitHub Pages after DNS is pointed to GitHub Pages. Configure HTTPS once available.
+Before launch, add the untouched official logo at `assets/logo.png` and update the `--brand-*` CSS variables at the top of `styles.css` to the exact colors sampled from the original brand artwork. The current colors are a temporary design palette, not a claim about the original palette.
 
-## Booking form
-The form currently prepares an email enquiry and opens the visitor's email client. It does not claim to make a confirmed reservation, calculate fares, or connect to a booking backend. Before production, replace the configured enquiry destination in `script.js` with the business's verified booking email or connect a real booking service.
+## Preview locally
 
-## Verified business information used
+Open `index.html` directly in a modern browser. The website uses a remote Google Fonts stylesheet and remote Unsplash imagery, so those visual assets need an internet connection.
+
+## Deploy with GitHub Pages
+
+A workflow is included at `.github/workflows/pages.yml`. To enable it:
+
+1. Open the repository's **Settings → Pages**.
+2. Under the build and deployment settings, choose **GitHub Actions** as the source.
+3. Push to `master`, or manually run the workflow from the **Actions** tab.
+4. After the first successful run, open the published URL shown in the Pages settings.
+
+Add a custom domain and configure DNS in Pages settings only when you're ready to point the domain to this repository. Enable HTTPS when GitHub offers it.
+
+## Transfer enquiry form
+
+The form validates the required trip details and opens WhatsApp with a prefilled enquiry for **+33 6 33 30 89 83**. The visitor reviews and sends the message themselves. This is an enquiry handoff, not an instant booking, availability check, fare calculator, or payment system.
+
+## Business information included
+
 - Phone: +33 6 33 30 89 83
-- Airport transfers for CDG, Orly, and Beauvais
-- Private transfers, hotel pickups, and sightseeing/private shuttle services
-- Bilingual chauffeurs, 24/7 service, flight monitoring, and meet-and-greet, as stated on the existing website
+- Airport transfer enquiries for Charles de Gaulle (CDG), Orly (ORY), and Beauvais (BVA)
+- Private transfers, hotel pickups, private shuttles, and sightseeing enquiries
+- Bilingual chauffeurs, flight monitoring, meet-and-greet, and 24/7 availability, as stated in the existing site information
 
-No prices, customer reviews, or unverified performance metrics are invented.
+No prices, invented testimonials, or unsupported performance statistics are included.
